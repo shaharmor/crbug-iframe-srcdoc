@@ -5,11 +5,11 @@
   <title>Top Frame</title>
 </head>
 <body style="height: 1200px">
-<iframe style="position:fixed; top: 0; left: 0; height: 1000px; width: 500px; border: solid 5px green" src="https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/"></iframe>
+<iframe sandbox="allow-scripts" style="position:fixed; top: 0; left: 0; height: 1000px; width: 500px; border: solid 5px green" src="https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/"></iframe>
 <script>
 const iframe = document.createElement('iframe');
 iframe.style = "position:fixed; top: 0; right: 0; height: 1000px; width: 500px; border: solid 5px red";
-iframe.sandbox = 'allow-scripts';
+iframe.sandbox = 'allow-scripts allow-same-origin';
 iframe.srcdoc = `
 <!DOCTYPE HTML>
 <html lang="en">

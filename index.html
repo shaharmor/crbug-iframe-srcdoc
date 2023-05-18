@@ -5,23 +5,6 @@
   <title>Top Frame</title>
 </head>
 <body style="height: 1200px">
-<script>
-const iframe = document.createElement('iframe');
-iframe.style = "position:fixed; top: 0; right: 0; height: 1000px; width: 500px; border: solid 5px red";
-iframe.sandbox = 'allow-scripts';
-iframe.srcdoc = `
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Srcdoc Frame</title>
-</head>
-<body>
-<iframe height="1000px" width="500px" src="https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/"></iframe>
-</body>
-</html>
-`
-document.body.appendChild(iframe);
-</script>
+<iframe sandbox="allow-scripts" height="1000px" width="500px" src="https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/"></iframe>
 </body>
 </html>

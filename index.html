@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Frame</title>
+</head>
+<body>
+<script>
+const iframe = document.createElement('iframe');
+iframe.style = "position:fixed; top:0; left:0; width:60em; height:100%; border:none; margin:0; padding:0; overflow:hidden;";
+iframe.sandbox = 'allow-scripts';
+iframe.allow = 'autoplay; microphone; camera;';
+iframe.srcdoc = `
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Srcdoc Frame</title>
+</head>
+<body>
+<iframe height="1000px" width="1000px" src="https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/"></iframe>
+</body>
+</html>
+`
+document.body.appendChild(iframe);
+</script>
+</body>
+</html>
